@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 10,
+      "authName": "用户管理",
+      "pid": 0,
+      "path": "users",
+      "children": [
+        {
+          "id": 101,
+          "authName": "用户列表",
+          "pid": 10,
+          "path": "users",
+          "children": [
+            {
+              "id": 1011,
+              "authName": "添加用户",
+              "pid": "10,101",
+              "path": "users"
+            },
+            {
+              "id": 1012,
+              "authName": "编辑用户",
+              "pid": "10,101",
+              "path": "users"
+            },
+            {
+              "id": 1013,
+              "authName": "删除用户",
+              "pid": "10,101",
+              "path": "users"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "authName": "权限管理",
+      "pid": 0,
+      "path": "rights",
+      "children": [
+        {
+          "id": 201,
+          "authName": "角色列表",
+          "pid": 20,
+          "path": "roles",
+          "children": [
+            {
+              "id": 2011,
+              "authName": "添加角色",
+              "pid": "20,201",
+              "path": "roles"
+            },
+            {
+              "id": 2012,
+              "authName": "编辑角色",
+              "pid": "20,201",
+              "path": "roles"
+            },
+            {
+              "id": 2013,
+              "authName": "删除角色",
+              "pid": "20,201",
+              "path": "roles"
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "authName": "权限列表",
+          "pid": 20,
+          "path": "rights",
+          "children": [
+            {
+              "id": 2021,
+              "authName": "查看权限",
+              "pid": "20,202",
+              "path": "rights"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "msg": "获取权限列表成功",
+    "status": 200
+  }
+}

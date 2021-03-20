@@ -1,0 +1,127 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "roleName": "超级管理员",
+      "roleDesc": "系统最高权限",
+      "children": [
+        {
+          "id": 10,
+          "authName": "用户管理",
+          "pid": 0,
+          "path": "users",
+          "children": [
+            {
+              "id": 101,
+              "authName": "用户列表",
+              "pid": 10,
+              "path": "users",
+              "children": [
+                {
+                  "id": 1011,
+                  "authName": "添加用户",
+                  "pid": "10,101",
+                  "path": "users"
+                },
+                {
+                  "id": 1012,
+                  "authName": "编辑用户",
+                  "pid": "10,101",
+                  "path": "users"
+                },
+                {
+                  "id": 1013,
+                  "authName": "删除用户",
+                  "pid": "10,101",
+                  "path": "users"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "authName": "权限管理",
+          "pid": 0,
+          "path": "rights",
+          "children": [
+            {
+              "id": 201,
+              "authName": "角色列表",
+              "pid": 20,
+              "path": "roles",
+              "children": [
+                {
+                  "id": 2011,
+                  "authName": "添加角色",
+                  "pid": "20,201",
+                  "path": "roles"
+                },
+                {
+                  "id": 2012,
+                  "authName": "编辑角色",
+                  "pid": "20,201",
+                  "path": "roles"
+                },
+                {
+                  "id": 2013,
+                  "authName": "删除角色",
+                  "pid": "20,201",
+                  "path": "roles"
+                }
+              ]
+            },
+            {
+              "id": 202,
+              "authName": "权限列表",
+              "pid": 20,
+              "path": "rights",
+              "children": [
+                {
+                  "id": 2021,
+                  "authName": "查看权限",
+                  "pid": "20,202",
+                  "path": "rights"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "roleName": "部门管理",
+      "roleDesc": "部门负责人",
+      "children": []
+    },
+    {
+      "id": 3,
+      "roleName": "行政管理",
+      "roleDesc": "行政负责人",
+      "children": []
+    },
+    {
+      "id": 4,
+      "roleName": "运维人员",
+      "roleDesc": "",
+      "children": []
+    },
+    {
+      "id": 5,
+      "roleName": "研发人员",
+      "roleDesc": "",
+      "children": []
+    },
+    {
+      "id": 6,
+      "roleName": "运营人员",
+      "roleDesc": "",
+      "children": []
+    }
+  ],
+  "meta": {
+    "msg": "获取角色列表成功",
+    "status": 200
+  }
+}
