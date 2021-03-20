@@ -1,0 +1,22 @@
+{
+  "data": {
+    "total": 1,
+    "userList": [
+      {
+        "id": 1000,
+        "username": "admin",
+        "email": "admin@example.com",
+        "mobile": "13558899666",
+        "status": true,
+        "roleId": 1,
+        "roleName": "超级管理员",
+        "createdAt": 1616238560,
+        "updatedAt": 1616238560
+      }
+    ]
+  },
+  "meta": {
+    "msg": "获取用户列表成功",
+    "status": 200
+  }
+}

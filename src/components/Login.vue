@@ -60,6 +60,7 @@ export default {
     loginFormSubmit() {
       this.$refs.loginRef.validate(async (valid) => {
         if (!valid) return null
+        console.log(this.loginForm)
         const { data: res } = await this.axios.get('/mocks/login.json')
         console.log(res)
         if (res.meta.status !== 200) return this.$message.error(res.meta.msg)

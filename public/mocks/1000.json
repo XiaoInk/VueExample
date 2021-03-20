@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 1000,
+    "username": "admin",
+    "email": "admin@example.com",
+    "mobile": "13558899666"
+  },
+  "meta": {
+    "msg": "获取用户数据成功",
+    "status": 200
+  }
+}
