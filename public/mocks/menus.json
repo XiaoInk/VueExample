@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 10,
+      "authName": "用户管理",
+      "path": null,
+      "children": [
+        {
+          "id": 101,
+          "authName": "用户列表",
+          "path": "users",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "authName": "权限管理",
+      "path": null,
+      "children": [
+        {
+          "id": 201,
+          "authName": "角色列表",
+          "path": "roles",
+          "children": []
+        },
+        {
+          "id": 202,
+          "authName": "权限列表",
+          "path": "rights",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "msg": "获取菜单数据成功",
+    "status": 200
+  }
+}
