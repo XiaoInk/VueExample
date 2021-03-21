@@ -4,9 +4,9 @@
     <el-header>
       <div>
         <img src="../assets/logo.png" alt="" />
-        <span>OMS 运维管理系统</span>
+        <span>运维管理系统</span>
       </div>
-      <el-button type="info" @click="logout">退出</el-button>
+      <el-button type="info" @click="logout">退 出</el-button>
     </el-header>
 
     <!-- 中心区域 -->
@@ -59,8 +59,10 @@ export default {
       menuList: [],
       // 菜单图标
       menuIconObj: {
-        10: 'el-icon-s-custom',
-        20: 'el-icon-s-opportunity'
+        1: 'el-icon-discover',
+        2: 'el-icon-s-platform',
+        3: 'el-icon-folder',
+        4: 'el-icon-setting'
       },
       // 激活路径
       activePath: ''

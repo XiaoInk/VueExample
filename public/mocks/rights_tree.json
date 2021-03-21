@@ -1,81 +1,148 @@
 {
   "data": [
     {
-      "id": 10,
-      "authName": "用户管理",
+      "id": 1,
+      "authName": "监控中心",
       "pid": 0,
-      "path": "users",
+      "path": "monitor",
+      "children": []
+    },
+    {
+      "id": 2,
+      "authName": "资产管理",
+      "pid": 0,
+      "path": "assets",
       "children": [
         {
-          "id": 101,
-          "authName": "用户列表",
-          "pid": 10,
-          "path": "users",
+          "id": 201,
+          "authName": "资产列表",
+          "pid": 2,
+          "path": "assets",
           "children": [
             {
-              "id": 1011,
-              "authName": "添加用户",
-              "pid": "10,101",
-              "path": "users"
+              "id": 2011,
+              "authName": "添加资产",
+              "pid": "2,201",
+              "path": "assets"
             },
             {
-              "id": 1012,
-              "authName": "编辑用户",
-              "pid": "10,101",
-              "path": "users"
+              "id": 2012,
+              "authName": "编辑资产",
+              "pid": "2,201",
+              "path": "assets"
             },
             {
-              "id": 1013,
-              "authName": "删除用户",
-              "pid": "10,101",
-              "path": "users"
+              "id": 2013,
+              "authName": "删除资产",
+              "pid": "2,201",
+              "path": "assets"
             }
           ]
         }
       ]
     },
     {
-      "id": 20,
-      "authName": "权限管理",
+      "id": 3,
+      "authName": "项目管理",
       "pid": 0,
-      "path": "rights",
+      "path": "projects",
       "children": [
         {
-          "id": 201,
+          "id": 301,
+          "authName": "项目列表",
+          "pid": 3,
+          "path": "projects",
+          "children": [
+            {
+              "id": 3011,
+              "authName": "添加项目",
+              "pid": "3,301",
+              "path": "projects"
+            },
+            {
+              "id": 3012,
+              "authName": "编辑项目",
+              "pid": "3,301",
+              "path": "projects"
+            },
+            {
+              "id": 3013,
+              "authName": "删除项目",
+              "pid": "3,301",
+              "path": "projects"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "authName": "系统设置",
+      "pid": 0,
+      "path": "settings",
+      "children": [
+        {
+          "id": 401,
+          "authName": "用户列表",
+          "pid": 4,
+          "path": "users",
+          "children": [
+            {
+              "id": 4011,
+              "authName": "添加用户",
+              "pid": "4,401",
+              "path": "users"
+            },
+            {
+              "id": 4012,
+              "authName": "编辑用户",
+              "pid": "4,401",
+              "path": "users"
+            },
+            {
+              "id": 4013,
+              "authName": "删除用户",
+              "pid": "4,401",
+              "path": "users"
+            }
+          ]
+        },
+        {
+          "id": 402,
           "authName": "角色列表",
-          "pid": 20,
+          "pid": 4,
           "path": "roles",
           "children": [
             {
-              "id": 2011,
+              "id": 4021,
               "authName": "添加角色",
-              "pid": "20,201",
+              "pid": "4,402",
               "path": "roles"
             },
             {
-              "id": 2012,
+              "id": 4022,
               "authName": "编辑角色",
-              "pid": "20,201",
+              "pid": "4,402",
               "path": "roles"
             },
             {
-              "id": 2013,
+              "id": 4023,
               "authName": "删除角色",
-              "pid": "20,201",
+              "pid": "4,402",
               "path": "roles"
             }
           ]
         },
         {
-          "id": 202,
+          "id": 403,
           "authName": "权限列表",
-          "pid": 20,
+          "pid": 4,
           "path": "rights",
           "children": [
             {
-              "id": 2021,
+              "id": 4031,
               "authName": "查看权限",
-              "pid": "20,202",
+              "pid": "4,403",
               "path": "rights"
             }
           ]

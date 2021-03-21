@@ -76,7 +76,7 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button type="info" @click="addDialogVisible = false">取 消</el-button>
+          <el-button @click="addDialogVisible = false">取 消</el-button>
           <el-button type="primary" @click="addUser">确 定</el-button>
         </span>
       </el-dialog>
@@ -96,7 +96,7 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button type="info" @click="editDialogVisible = false">取 消</el-button>
+          <el-button @click="editDialogVisible = false">取 消</el-button>
           <el-button type="primary" @click="editUser">确 定</el-button>
         </span>
       </el-dialog>
@@ -208,10 +208,10 @@ export default {
     addUser() {
       this.$refs.addFormRef.validate(async (valid) => {
         if (!valid) return null
+        console.log(this.addForm)
         // TODO 发起请求
-        console.log(this.addForm) // TODO 为什么获取不到值呢 ？
-        await this.getUserList()
-        this.addDialogVisible = false
+        // this.addDialogVisible = false
+        // await this.getUserList()
       })
     },
     // 编辑用户

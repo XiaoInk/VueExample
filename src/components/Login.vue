@@ -5,7 +5,7 @@
       <div class="login-logo"><img src="../assets/logo.png" alt="" /></div>
 
       <!-- 登录表单区域 -->
-      <el-form class="login-form" ref="loginRef" :model="loginForm" :rules="loginFormRules">
+      <el-form class="login-form" ref="loginFormRef" :model="loginForm" :rules="loginFormRules">
         <!-- 登录用户 -->
         <el-form-item prop="username">
           <el-input v-model="loginForm.username" prefix-icon="el-icon-user"></el-input>
@@ -17,7 +17,7 @@
         <!-- 按钮区域 -->
         <el-form-item class="btns">
           <el-button type="primary" @click="loginFormSubmit">登录</el-button>
-          <el-button type="info" @click="loginFormReset">重置</el-button>
+          <el-button @click="loginFormReset">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -58,7 +58,7 @@ export default {
   methods: {
     // 表单提交
     loginFormSubmit() {
-      this.$refs.loginRef.validate(async (valid) => {
+      this.$refs.loginFormRef.validate(async (valid) => {
         if (!valid) return null
         console.log(this.loginForm)
         const { data: res } = await this.axios.get('/mocks/login.json')

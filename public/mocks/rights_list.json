@@ -1,87 +1,157 @@
 {
   "data": [
     {
-      "id": 10,
-      "authName": "用户管理",
+      "id": 1,
+      "authName": "监控中心",
       "level": 0,
       "pid": 0,
-      "path": "users"
+      "path": "monitor"
     },
     {
-      "id": 20,
-      "authName": "权限管理",
+      "id": 2,
+      "authName": "资产管理",
       "level": 0,
       "pid": 0,
-      "path": "rights"
+      "path": "assets"
     },
     {
-      "id": 101,
-      "authName": "用户列表",
-      "level": 1,
-      "pid": 10,
-      "path": "users"
+      "id": 3,
+      "authName": "项目管理",
+      "level": 0,
+      "pid": 0,
+      "path": "projects"
+    },
+    {
+      "id": 4,
+      "authName": "系统设置",
+      "level": 0,
+      "pid": 0,
+      "path": "settings"
     },
     {
       "id": 201,
-      "authName": "角色列表",
+      "authName": "资产列表",
       "level": 1,
-      "pid": 20,
-      "path": "roles"
+      "pid": 2,
+      "path": "assets"
     },
     {
-      "id": 202,
+      "id": 301,
+      "authName": "项目列表",
+      "level": 1,
+      "pid": 3,
+      "path": "projects"
+    },
+    {
+      "id": 401,
+      "authName": "用户列表",
+      "level": 1,
+      "pid": 4,
+      "path": "users"
+    },
+    {
+      "id": 402,
+      "authName": "角色列表",
+      "level": 1,
+      "pid": 4,
+      "path": "users"
+    },
+    {
+      "id": 403,
       "authName": "权限列表",
       "level": 1,
-      "pid": 20,
+      "pid": 4,
       "path": "rights"
     },
     {
-      "id": 1011,
-      "authName": "添加用户",
-      "level": 2,
-      "pid": "10,101",
-      "path": "users"
-    },
-    {
-      "id": 1012,
-      "authName": "编辑用户",
-      "level": 2,
-      "pid": "10,101",
-      "path": "users"
-    },
-    {
-      "id": 1013,
-      "authName": "删除用户",
-      "level": 2,
-      "pid": "10,101",
-      "path": "users"
-    },
-    {
       "id": 2011,
-      "authName": "添加角色",
+      "authName": "添加资产",
       "level": 2,
-      "pid": "20,201",
-      "path": "roles"
+      "pid": "2,201",
+      "path": "assets"
     },
     {
       "id": 2012,
-      "authName": "编辑角色",
+      "authName": "编辑资产",
       "level": 2,
-      "pid": "20,201",
-      "path": "roles"
+      "pid": "2,201",
+      "path": "assets"
     },
     {
       "id": 2013,
-      "authName": "删除角色",
+      "authName": "删除资产",
       "level": 2,
-      "pid": "20,201",
+      "pid": "2,201",
+      "path": "assets"
+    },
+    {
+      "id": 3011,
+      "authName": "添加项目",
+      "level": 2,
+      "pid": "3,301",
+      "path": "projects"
+    },
+    {
+      "id": 3012,
+      "authName": "编辑项目",
+      "level": 2,
+      "pid": "3,301",
+      "path": "projects"
+    },
+    {
+      "id": 3013,
+      "authName": "删除项目",
+      "level": 2,
+      "pid": "3,301",
+      "path": "projects"
+    },
+    {
+      "id": 4011,
+      "authName": "添加用户",
+      "level": 2,
+      "pid": "4,401",
+      "path": "users"
+    },
+    {
+      "id": 4012,
+      "authName": "编辑用户",
+      "level": 2,
+      "pid": "4,401",
+      "path": "users"
+    },
+    {
+      "id": 4013,
+      "authName": "删除用户",
+      "level": 2,
+      "pid": "4,401",
+      "path": "users"
+    },
+    {
+      "id": 4021,
+      "authName": "添加角色",
+      "level": 2,
+      "pid": "4,402",
       "path": "roles"
     },
     {
-      "id": 2021,
+      "id": 4022,
+      "authName": "编辑角色",
+      "level": 2,
+      "pid": "4,402",
+      "path": "roles"
+    },
+    {
+      "id": 4023,
+      "authName": "删除角色",
+      "level": 2,
+      "pid": "4,402",
+      "path": "roles"
+    },
+    {
+      "id": 4031,
       "authName": "查看权限",
       "level": 2,
-      "pid": "20,202",
+      "pid": "4,403",
       "path": "rights"
     }
   ],
