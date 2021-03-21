@@ -41,7 +41,7 @@
             <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteUser(scope.row.id)"></el-button>
             <!-- 权限按钮 -->
             <el-tooltip effect="dark" content="分配角色" placement="top" :enterable="false">
-              <el-button type="warning" icon="el-icon-setting" size="mini"></el-button>
+              <el-button type="warning" icon="el-icon-setting" size="mini" @click="setRoleDialog(scope.row)"></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -101,6 +101,22 @@
         </span>
       </el-dialog>
     </el-card>
+
+    <!-- 分配角色对话框 -->
+    <el-dialog title="角色分配" :visible.sync="setRoleDialogVisible" width="50%" @close="setRoleDialogClosed">
+      <p>当前的用户：{{ userInfo.username }}</p>
+      <p>当前的角色：{{ userInfo.roleName }}</p>
+      <p>
+        分配新角色：
+        <el-select v-model="selectedRoleId" placeholder="请选择..." size="mini">
+          <el-option v-for="role in roleList" :key="role.id" :label="role.roleName" :value="role.id"></el-option>
+        </el-select>
+      </p>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="setRoleDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="setRole">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -171,7 +187,16 @@ export default {
           { required: true, message: '请输入手机号码', trigger: 'blur' },
           { validator: checkMobile, trigger: 'blur' }
         ]
-      }
+      },
+      // 是否弹出角色分配对话框
+      setRoleDialogVisible: false,
+      userInfo: {
+        username: '',
+        roleName: ''
+      },
+      roleList: [],
+      // 选中的角色ID
+      selectedRoleId: ''
     }
   },
   created() {
@@ -247,6 +272,29 @@ export default {
     // 监听 editDialog 关闭事件
     editDialogClosed() {
       this.$refs.editFormRef.resetFields()
+    },
+    // 监听 setRoleDialog 点击事件
+    async setRoleDialog(user) {
+      this.userInfo = user
+
+      const { data: res } = await this.axios.get('/mocks/roles.json')
+      console.log(res)
+      if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
+      this.roleList = res.data
+      this.setRoleDialogVisible = true
+    },
+    // 分配角色
+    setRole() {
+      if (!this.selectedRoleId) return this.$message.error('请选择要分配的角色')
+      console.log(`userId: ${this.userInfo.id} roleId: ${this.selectedRoleId}`)
+      // TODO 发起请求
+      // this.getUserList()
+      // this.setRoleDialogVisible = false
+    },
+    // 监听 setRoleDialog 关闭事件
+    setRoleDialogClosed() {
+      this.userInfo = {}
+      this.selectedRoleId = ''
     }
   }
 }
